@@ -7,35 +7,42 @@ end
 
 gem 'mongoid'
 
-# gem 'bootstrap-sass'
+gem 'bootstrap-sass'
 
-# gem 'kaminari'
+gem 'kaminari'
 
-# gem 'farm_ruby', git: 'https://github.com/jessethebuilder/farm_ruby'
+gem 'aws-sdk', '~> 2'
+gem 'mini_magick'
+gem 'carrierwave'
+
+gem 'devise'
+
+gem 'farm_ruby', git: 'https://github.com/jessethebuilder/farm_ruby'
+gem 'farm_shed', git: 'https://github.com/jessethebuilder/farm_shed'
+gem 'farm_devise_views', git: 'https://github.com/jessethebuilder/farm_devise_views'
 # gem 'farm_scrape', git: 'https://github.com/jessethebuilder/farm_scrape.git'
 
+group :test, :development do
+  gem 'faker'
+  gem 'rspec-rails'
+  gem 'database_cleaner', '~> 1.0.0rc'
+  gem 'timecop'
+end
 
-# group :test, :development do
-#   gem 'faker'
-#   gem 'rspec-rails'
-#   gem 'database_cleaner', '~> 1.0.0rc'
-#   gem 'timecop'
-# end
-#
-# group :development do
-#   gem 'web-console'
-# end
-#
-# group :test do
-#   gem 'factory_girl_rails'
-#   gem 'capybara'
-#   gem 'guard-rspec'
-#   gem 'selenium-webdriver'
-#   gem 'shoulda'
-#   gem 'launchy', '~> 2.3.0'
-#   #gem 'webrat'
-#   gem 'poltergeist'
-# end
+group :development do
+  gem 'web-console'
+end
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'guard-rspec'
+  gem 'selenium-webdriver'
+  gem 'shoulda'
+  gem 'launchy', '~> 2.3.0'
+  #gem 'webrat'
+  gem 'poltergeist'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
