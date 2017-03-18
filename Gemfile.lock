@@ -86,10 +86,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    carrierwave (1.0.0)
-      activemodel (>= 4.0.0)
-      activesupport (>= 4.0.0)
-      mime-types (>= 1.16)
     childprocess (0.6.2)
       ffi (~> 1.0, >= 1.0.11)
     cliver (0.3.2)
@@ -323,8 +319,7 @@ DEPENDENCIES
   bootstrap-sass
   byebug
   capybara
-  carrierwave
-  database_cleaner (~> 1.0.0rc)
+  database_cleaner
   devise
   factory_girl_rails
   faker
@@ -335,7 +330,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   kaminari
-  launchy (~> 2.3.0)
+  launchy
   listen (~> 3.0.5)
   mini_magick
   mongoid

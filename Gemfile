@@ -11,9 +11,10 @@ gem 'bootstrap-sass'
 
 gem 'kaminari'
 
-gem 'aws-sdk', '~> 2'
 gem 'mini_magick'
-gem 'carrierwave'
+# gem 'fog'
+# gem 'carrierwave'
+gem 'aws-sdk', '~> 2'
 
 gem 'devise'
 
@@ -25,7 +26,7 @@ gem 'farm_devise_views', git: 'https://github.com/jessethebuilder/farm_devise_vi
 group :test, :development do
   gem 'faker'
   gem 'rspec-rails'
-  gem 'database_cleaner', '~> 1.0.0rc'
+  gem 'database_cleaner'
   gem 'timecop'
 end
 
@@ -39,7 +40,7 @@ group :test do
   gem 'guard-rspec'
   gem 'selenium-webdriver'
   gem 'shoulda'
-  gem 'launchy', '~> 2.3.0'
+  gem 'launchy'
   #gem 'webrat'
   gem 'poltergeist'
 end
