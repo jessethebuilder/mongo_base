@@ -43,6 +43,7 @@ group :test do
   gem 'launchy'
   #gem 'webrat'
   gem 'poltergeist'
+  gem 'mongoid-rspec'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
