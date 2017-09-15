@@ -9,19 +9,24 @@ gem 'mongoid'
 
 gem 'bootstrap-sass'
 
-gem 'kaminari'
+gem 'kaminari-mongoid'
+gem 'kaminari-actionview'
 
-gem 'mini_magick'
+# gem 'mini_magick'
 # gem 'fog'
 # gem 'carrierwave'
-gem 'aws-sdk', '~> 2'
+# gem 'aws-sdk', '~> 2'
 
 gem 'devise'
 
 gem 'farm_ruby', git: 'https://github.com/jessethebuilder/farm_ruby'
-gem 'farm_shed', git: 'https://github.com/jessethebuilder/farm_shed'
+gem 'farm_shed', git: 'https://github.com/jessethebuilder/farm_shed', branch: 'lite'
 gem 'farm_devise_views', git: 'https://github.com/jessethebuilder/farm_devise_views'
+gem 'meta_farm', '0.0.1', :git => 'https://github.com/jessethebuilder/meta_farm'
+# gem 'meta_farm', '0.0.1', :path => 'c:/users/bucky/desktop/jesseweb/meta_farm'
+
 # gem 'farm_scrape', git: 'https://github.com/jessethebuilder/farm_scrape.git'
+
 
 group :test, :development do
   gem 'faker'
@@ -89,3 +94,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+ruby '2.3.1'
