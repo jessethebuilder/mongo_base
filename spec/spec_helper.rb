@@ -5,7 +5,10 @@ Capybara.javascript_driver = :poltergeist
 
 require 'support/features_helper'
 
+require 'rails/mongoid'
 require 'mongoid-rspec'
+
+require 'database_cleaner'
 
 RSpec.configure do |config|
   config.include Mongoid::Matchers, type: :model
@@ -13,34 +16,34 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = [:should, :expect]
   end
-  
+
   config.include FactoryGirl::Syntax::Methods
 
   # config.use_transactional_fixtures = false
 
-  config.before(:suite) do
-    DatabaseCleaner.clean_with(:truncation)
-  end
-
-  config.before(:each) do
-    DatabaseCleaner.strategy = :truncation
-  end
-
-  config.before(:each, type: :feature) do
-    driver_shares_db_connection_with_specs = Capybara.current_driver == :rack_test
-
-    if !driver_shares_db_connection_with_specs
-      DatabaseCleaner.strategy = :truncation
-    end
-  end
-
-  config.before(:each) do
-    DatabaseCleaner.start
-  end
-
-  config.append_after(:each) do
-    DatabaseCleaner.clean
-  end
+  # config.before(:suite) do
+  #   DatabaseCleaner.clean_with(:truncation)
+  # end
+  #
+  # config.before(:each) do
+  #   DatabaseCleaner.strategy = :truncation
+  # end
+  #
+  # config.before(:each, type: :feature) do
+  #   driver_shares_db_connection_with_specs = Capybara.current_driver == :rack_test
+  #
+  #   if !driver_shares_db_connection_with_specs
+  #     DatabaseCleaner.strategy = :truncation
+  #   end
+  # end
+  #
+  # config.before(:each) do
+  #   DatabaseCleaner.start
+  # end
+  #
+  # config.append_after(:each) do
+  #   DatabaseCleaner.clean
+  # end
 end
 
 RSpec.configure do |config|

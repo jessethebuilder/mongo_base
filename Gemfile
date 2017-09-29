@@ -48,6 +48,7 @@ gem 'mongo_address', git: 'https://github.com/jessethebuilder/mongo_address.git'
 gem 'faker'
 group :test, :development do
   gem 'rspec-rails'
+
   gem 'database_cleaner'
   gem 'timecop'
   gem 'byebug', platform: :mri
